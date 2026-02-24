@@ -1,0 +1,25 @@
+# 2634. Filter Elements from Array
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/filter-elements-from-array/submissions/1930048579/
+# Date: 25/02/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 25/02/2026
+
+ * @param {Function} fn * @param {Function} fn
+ * @return {number[]} * @return {number[]}
+ */ */
+var filter = function(arr, fn) {var filter = function(arr, fn) {
+    let result = []    let result = []
+    let r = false    let r = false
+    for (i=0;i<arr.length;i++){    for (i=0;i<arr.length;i++){
+        r = fn(arr[i],i)        r = fn(arr[i],i)
+        if(r){        if(r){
+            result.push(arr[i])            result.push(arr[i])
+        }        }
+    }    }
+    return result    return result
+};};
+
+
