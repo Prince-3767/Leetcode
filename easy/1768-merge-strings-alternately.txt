@@ -1,0 +1,26 @@
+# 1768. Merge Strings Alternately
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/merge-strings-alternately/
+# Date: 24/02/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 24/02/2026
+
+            strs.append(word2[i])            strs.append(word2[i])
+            i+=1            i+=1
+        if i!=len(word1):        if i!=len(word1):
+            while i<len(word1):            while i<len(word1):
+                strs.append(word2[i])                strs.append(word2[i])
+                strs.append(word1[i])                strs.append(word1[i])
+                i+=1                i+=1
+        else:        else:
+            while i<len(word2):            while i<len(word2):
+        strs = []        strs = []
+        while i<len(word1) and i<len(word2):        while i<len(word1) and i<len(word2):
+            strs.append(word1[i])            strs.append(word1[i])
+    def mergeAlternately(self, word1: str, word2: str) -> str:    def mergeAlternately(self, word1: str, word2: str) -> str:
+        i=0        i=0
+class Solution:class Solution:
+
+
