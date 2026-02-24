@@ -7,8 +7,31 @@
 # Language: txt
 # Date: 24/02/2026
 
-        Do not return anything, modify matrix in-place instead.        Do not return anything, modify matrix in-place instead.
+Â Â Â Â Â Â Â Â DoÂ notÂ returnÂ anything,Â modifyÂ matrixÂ in-placeÂ instead.Â Â Â Â Â Â Â Â DoÂ notÂ returnÂ anything,Â modifyÂ matrixÂ in-placeÂ instead.
+Â Â Â Â Â Â Â Â """Â Â Â Â Â Â Â Â """
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+
+
+
+# ========== Solution B ==========
+# Language: txt
+# Date: 24/02/2026
+
         """        """
+        rows = len(matrix)        rows = len(matrix)
+        cols = len(matrix[0])        cols = len(matrix[0])
+        r = set()        r = set()
+        c = set()        c = set()
+        for i in range(rows):        for i in range(rows):
+            for j in range(cols):            for j in range(cols):
+                if matrix[i][j]==0:                if matrix[i][j]==0:
+                    r.add(i)                    r.add(i)
+                    c.add(j)                    c.add(j)
+        for i in range(rows):        for i in range(rows):
+            for j in range(cols):            for j in range(cols):
+                if i in r or j in c:                if i in r or j in c:
+                    matrix[i][j]=0                            matrix[i][j]=0        
+                
                 
 
 
