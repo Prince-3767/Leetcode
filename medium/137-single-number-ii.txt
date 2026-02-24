@@ -1,0 +1,20 @@
+# 137. Single Number II
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/single-number-ii/submissions/1930040628/
+# Date: 25/02/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 25/02/2026
+
+class Solution:class Solution:
+    def singleNumber(self, nums: List[int]) -> int:    def singleNumber(self, nums: List[int]) -> int:
+        freq={}        freq={}
+        for num in nums:        for num in nums:
+            freq[num]=freq.get(num,0)+1            freq[num]=freq.get(num,0)+1
+            if freq[num]==3:            if freq[num]==3:
+                del freq[num]                del freq[num]
+        num, = freq        num, = freq
+        return num        return num
+
+
