@@ -1,0 +1,23 @@
+# 42. Trapping Rain Water
+# Difficulty: Hard
+# URL: https://leetcode.com/problems/trapping-rain-water/
+# Date: 05/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 05/03/2026
+
+        left,right = 0,len(height)-1        left,right = 0,len(height)-1
+        water = 0        water = 0
+        while left<=right:        while left<=right:
+            lmax = max(height[left],lmax)            lmax = max(height[left],lmax)
+            rmax = max(height[right],rmax)            rmax = max(height[right],rmax)
+            if lmax<rmax:            if lmax<rmax:
+                water+=lmax-height[left]                water+=lmax-height[left]
+                left+=1                left+=1
+            else:            else:
+                water+=rmax-height[right]                water+=rmax-height[right]
+                right-=1                right-=1
+        return water        return water
+
+
