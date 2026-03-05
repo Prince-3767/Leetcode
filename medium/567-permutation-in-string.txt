@@ -1,0 +1,25 @@
+# 567. Permutation in String
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/permutation-in-string/
+# Date: 05/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 05/03/2026
+
+            f1[ch] = f1.get(ch,0)+1            f1[ch] = f1.get(ch,0)+1
+       left = right = 0       left = right = 0
+       window = {}       window = {}
+       while right<n:       while right<n:
+            window[s2[right]]=window.get(s2[right],0)+1            window[s2[right]]=window.get(s2[right],0)+1
+
+            if right-left+1>k:            if right-left+1>k:
+                del window[s2[left]]                del window[s2[left]]
+                left+=1                left+=1
+            if window == f1:            if window == f1:
+                return True                return True
+            right+=1            right+=1
+       return False       return False
+
+
+
