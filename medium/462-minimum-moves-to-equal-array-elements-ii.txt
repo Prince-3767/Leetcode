@@ -1,0 +1,23 @@
+# 462. Minimum Moves to Equal Array Elements II
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/submissions/1944187402/
+# Date: 10/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 10/03/2026
+
+class Solution:class Solution:
+    def minMoves2(self, nums: List[int]) -> int:    def minMoves2(self, nums: List[int]) -> int:
+        count = 0        count = 0
+        nums.sort()        nums.sort()
+        mid = nums[len(nums)//2]        mid = nums[len(nums)//2]
+        for num in nums:        for num in nums:
+            if num>mid:            if num>mid:
+                count+=num-mid                count+=num-mid
+            else:            else:
+                count+=mid-num                count+=mid-num
+        return count        return count
+                
+
+
