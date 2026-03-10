@@ -7,9 +7,27 @@
 # Language: txt
 # Date: 10/03/2026
 
-class Solution:class Solution:
+classÂ Solution:classÂ Solution:
+Â Â Â Â defÂ maxProduct(self,Â nums:Â List[int])Â ->Â int:Â Â Â Â defÂ maxProduct(self,Â nums:Â List[int])Â ->Â int:
+Â Â Â Â Â Â Â Â maxPÂ =Â float("-inf")Â Â Â Â Â Â Â Â maxPÂ =Â float("-inf")
+Â Â Â Â Â Â Â Â positiveÂ =Â negativeÂ =Â nums[0]Â Â Â Â Â Â Â Â positiveÂ =Â negativeÂ =Â nums[0]
+Â Â Â Â Â Â Â Â forÂ numÂ inÂ nums[1:]:Â Â Â Â Â Â Â Â forÂ numÂ inÂ nums[1:]:
+Â Â Â Â Â Â Â Â Â Â Â Â ifÂ numÂ <0:Â Â Â Â Â Â Â Â Â Â Â Â ifÂ numÂ <0:
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â positive,negativeÂ =Â negative,positiveÂ Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â positive,negativeÂ =Â negative,positive
+Â Â Â Â Â Â Â Â Â Â Â Â positiveÂ =Â max(num,num*positive)Â Â Â Â Â Â Â Â Â Â Â Â positiveÂ =Â max(num,num*positive)
+
+Â Â Â Â Â Â Â Â Â Â Â Â negativeÂ =Â min(num,num*negative)Â Â Â Â Â Â Â Â Â Â Â Â negativeÂ =Â min(num,num*negative)
+Â Â Â Â Â Â Â Â Â Â Â Â maxPÂ =Â max(maxP,positive)Â Â Â Â Â Â Â Â Â Â Â Â maxPÂ =Â max(maxP,positive)
+Â Â Â Â Â Â Â Â returnÂ maxPÂ Â Â Â Â Â Â Â returnÂ maxP
+
+
+
+# ========== Solution B ==========
+# Language: txt
+# Date: 10/03/2026
+
     def maxProduct(self, nums: List[int]) -> int:    def maxProduct(self, nums: List[int]) -> int:
-        maxP = float("-inf")        maxP = float("-inf")
+        maxP = nums[0]        maxP = nums[0]
         positive = negative = nums[0]        positive = negative = nums[0]
         for num in nums[1:]:        for num in nums[1:]:
             if num <0:            if num <0:
@@ -19,5 +37,6 @@ class Solution:class Solution:
             negative = min(num,num*negative)            negative = min(num,num*negative)
             maxP = max(maxP,positive)            maxP = max(maxP,positive)
         return maxP        return maxP
+class Solution:class Solution:
 
 
