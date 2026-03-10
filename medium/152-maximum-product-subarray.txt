@@ -7,9 +7,27 @@
 # Language: txt
 # Date: 10/03/2026
 
-classÂ Solution:classÂ Solution:
+classÃÂ Solution:classÃÂ Solution:
+ÃÂ ÃÂ ÃÂ ÃÂ defÃÂ maxProduct(self,ÃÂ nums:ÃÂ List[int])ÃÂ ->ÃÂ int:ÃÂ ÃÂ ÃÂ ÃÂ defÃÂ maxProduct(self,ÃÂ nums:ÃÂ List[int])ÃÂ ->ÃÂ int:
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ maxPÃÂ =ÃÂ float("-inf")ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ maxPÃÂ =ÃÂ float("-inf")
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ positiveÃÂ =ÃÂ negativeÃÂ =ÃÂ nums[0]ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ positiveÃÂ =ÃÂ negativeÃÂ =ÃÂ nums[0]
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ forÃÂ numÃÂ inÃÂ nums[1:]:ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ forÃÂ numÃÂ inÃÂ nums[1:]:
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ifÃÂ numÃÂ <0:ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ifÃÂ numÃÂ <0:
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ positive,negativeÃÂ =ÃÂ negative,positiveÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ positive,negativeÃÂ =ÃÂ negative,positive
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ positiveÃÂ =ÃÂ max(num,num*positive)ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ positiveÃÂ =ÃÂ max(num,num*positive)
+
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ negativeÃÂ =ÃÂ min(num,num*negative)ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ negativeÃÂ =ÃÂ min(num,num*negative)
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ maxPÃÂ =ÃÂ max(maxP,positive)ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ maxPÃÂ =ÃÂ max(maxP,positive)
+ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ returnÃÂ maxPÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ ÃÂ returnÃÂ maxP
+
+
+
+# ========== Solution B ==========
+# Language: txt
+# Date: 10/03/2026
+
 Â Â Â Â defÂ maxProduct(self,Â nums:Â List[int])Â ->Â int:Â Â Â Â defÂ maxProduct(self,Â nums:Â List[int])Â ->Â int:
-Â Â Â Â Â Â Â Â maxPÂ =Â float("-inf")Â Â Â Â Â Â Â Â maxPÂ =Â float("-inf")
+Â Â Â Â Â Â Â Â maxPÂ =Â nums[0]Â Â Â Â Â Â Â Â maxPÂ =Â nums[0]
 Â Â Â Â Â Â Â Â positiveÂ =Â negativeÂ =Â nums[0]Â Â Â Â Â Â Â Â positiveÂ =Â negativeÂ =Â nums[0]
 Â Â Â Â Â Â Â Â forÂ numÂ inÂ nums[1:]:Â Â Â Â Â Â Â Â forÂ numÂ inÂ nums[1:]:
 Â Â Â Â Â Â Â Â Â Â Â Â ifÂ numÂ <0:Â Â Â Â Â Â Â Â Â Â Â Â ifÂ numÂ <0:
@@ -19,24 +37,25 @@ classÂ Solution:classÂ Solution:
 Â Â Â Â Â Â Â Â Â Â Â Â negativeÂ =Â min(num,num*negative)Â Â Â Â Â Â Â Â Â Â Â Â negativeÂ =Â min(num,num*negative)
 Â Â Â Â Â Â Â Â Â Â Â Â maxPÂ =Â max(maxP,positive)Â Â Â Â Â Â Â Â Â Â Â Â maxPÂ =Â max(maxP,positive)
 Â Â Â Â Â Â Â Â returnÂ maxPÂ Â Â Â Â Â Â Â returnÂ maxP
+classÂ Solution:classÂ Solution:
 
 
 
-# ========== Solution B ==========
+# ========== Solution C ==========
 # Language: txt
 # Date: 10/03/2026
 
+class Solution:class Solution:
     def maxProduct(self, nums: List[int]) -> int:    def maxProduct(self, nums: List[int]) -> int:
         maxP = nums[0]        maxP = nums[0]
-        positive = negative = nums[0]        positive = negative = nums[0]
+        cmin = cmax = nums[0]        cmin = cmax = nums[0]
         for num in nums[1:]:        for num in nums[1:]:
-            if num <0:            if num <0:
-                positive,negative = negative,positive                positive,negative = negative,positive
-            positive = max(num,num*positive)            positive = max(num,num*positive)
+            tmax = max(num,num*cmax,num*cmin)            tmax = max(num,num*cmax,num*cmin)
+            tmin = min(num,num*cmax,num*cmin)            tmin = min(num,num*cmax,num*cmin)
+            cmin = tmin            cmin = tmin
 
-            negative = min(num,num*negative)            negative = min(num,num*negative)
-            maxP = max(maxP,positive)            maxP = max(maxP,positive)
+            cmax = tmax            cmax = tmax
+            maxP = max(maxP,cmax)            maxP = max(maxP,cmax)
         return maxP        return maxP
-class Solution:class Solution:
 
 
