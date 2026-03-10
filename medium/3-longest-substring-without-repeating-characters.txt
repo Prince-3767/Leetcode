@@ -1,0 +1,23 @@
+# 3. Longest Substring Without Repeating Characters
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+# Date: 10/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 10/03/2026
+
+        left = 0        left = 0
+        unique = set()        unique = set()
+        maxlen = 0        maxlen = 0
+        for right in range(len(s))        for right in range(len(s))
+            while s[right] in unique:            while s[right] in unique:
+                unique.remove(s[left])                unique.remove(s[left])
+                left+=1                left+=1
+            unique.add(s[right])            unique.add(s[right])
+            maxlen = max(maxlen,right-left+1)            maxlen = max(maxlen,right-left+1)
+                        
+    def lengthOfLongestSubstring(self, s: str) -> int:    def lengthOfLongestSubstring(self, s: str) -> int:
+class Solution:class Solution:
+
+
