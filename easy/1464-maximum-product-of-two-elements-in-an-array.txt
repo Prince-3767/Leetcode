@@ -1,0 +1,25 @@
+# 1464. Maximum Product of Two Elements in an Array
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
+# Date: 10/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 10/03/2026
+
+    def maxProduct(self, nums: List[int]) -> int:    def maxProduct(self, nums: List[int]) -> int:
+                
+        # left = 0        # left = 0
+        # right = len(nums)-1        # right = len(nums)-1
+        # while left<right:        # while left<right:
+        first = second = nums[0]        first = second = nums[0]
+        for num in nums:        for num in nums:
+            if num>first:            if num>first:
+                second = first                second = first
+                first = num                first = num
+            elif num>second:            elif num>second:
+                second = num                second = num
+        return (first-1)*(second-1)         return (first-1)*(second-1) 
+class Solution:class Solution:
+
+
