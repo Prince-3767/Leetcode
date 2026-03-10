@@ -1,0 +1,26 @@
+# 560. Subarray Sum Equals K
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/subarray-sum-equals-k/submissions/1944223101/
+# Date: 10/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 10/03/2026
+
+class Solution:class Solution:
+        def subarraySum(self, nums: List[int], k: int) -> int:        def subarraySum(self, nums: List[int], k: int) -> int:
+            result=0            result=0
+            seen = {0:1}#prefixSum:count            seen = {0:1}#prefixSum:count
+            prefix = 0            prefix = 0
+            for num in nums:            for num in nums:
+                prefix+=num                prefix+=num
+                if prefix==k:                if prefix==k:
+                    result+=1                    result+=1
+                elif prefix-k in seen:                elif prefix-k in seen:
+                    result+= seen[prefix-k]                    result+= seen[prefix-k]
+                seen[prefix] = seen.get(prefix,0)+1                seen[prefix] = seen.get(prefix,0)+1
+            return result            return result
+
+                        
+
+
