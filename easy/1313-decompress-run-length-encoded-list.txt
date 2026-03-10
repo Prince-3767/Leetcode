@@ -1,0 +1,17 @@
+# 1313. Decompress Run-Length Encoded List
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/decompress-run-length-encoded-list/submissions/1944262364/
+# Date: 10/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 10/03/2026
+
+class Solution:class Solution:
+    def decompressRLElist(self, nums: List[int]) -> List[int]:    def decompressRLElist(self, nums: List[int]) -> List[int]:
+        result  =[]        result  =[]
+        for i in range(0,len(nums),2):        for i in range(0,len(nums),2):
+            result+=[nums[i+1]]*nums[i]            result+=[nums[i+1]]*nums[i]
+        return result        return result
+
+
