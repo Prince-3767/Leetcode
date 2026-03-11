@@ -1,0 +1,22 @@
+# 80. Remove Duplicates from Sorted Array II
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/submissions/1945366750/
+# Date: 12/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 12/03/2026
+
+class Solution:class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:    def removeDuplicates(self, nums: List[int]) -> int:
+        freq = {}        freq = {}
+        left = 0        left = 0
+        for right in range(len(nums)):        for right in range(len(nums)):
+            if freq[nums[right]]<=2:            if freq[nums[right]]<=2:
+                nums[left]=nums[right]                nums[left]=nums[right]
+                left+=1                left+=1
+                        
+            freq[nums[right]] = freq.get(nums[right],0)+1            freq[nums[right]] = freq.get(nums[right],0)+1
+        return left        return left
+
+
