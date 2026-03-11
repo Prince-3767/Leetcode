@@ -1,0 +1,20 @@
+# 217. Contains Duplicate
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/contains-duplicate/submissions/1945094793/
+# Date: 11/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 11/03/2026
+
+class Solution:class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()        seen = set()
+        for num in nums:        for num in nums:
+            if num in seen:            if num in seen:
+                return True                return True
+            seen.add(num)            seen.add(num)
+        return False        return False
+                
+
+
