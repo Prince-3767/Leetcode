@@ -1,0 +1,20 @@
+# 219. Contains Duplicate II
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/contains-duplicate-ii/submissions/1945110447/
+# Date: 11/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 11/03/2026
+
+class Solution:class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        seen = {}        seen = {}
+        for i in range(len(nums)):        for i in range(len(nums)):
+            if nums[i] in seen and (i-seen[nums[i]] <=k):            if nums[i] in seen and (i-seen[nums[i]] <=k):
+                return True                return True
+            seen[nums[i]] = i            seen[nums[i]] = i
+        return False        return False
+                
+
+
