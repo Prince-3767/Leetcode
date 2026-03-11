@@ -1,0 +1,21 @@
+# 1299. Replace Elements with Greatest Element on Right Side
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/
+# Date: 11/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 11/03/2026
+
+class Solution:class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:    def replaceElements(self, arr: List[int]) -> List[int]:
+        greatest = -1        greatest = -1
+        for i in range(len(arr)-1,-1,-1):        for i in range(len(arr)-1,-1,-1):
+            num = arr[i]            num = arr[i]
+            arr[i] = greatest            arr[i] = greatest
+            if num>greatest:            if num>greatest:
+                greatest = num                greatest = num
+        return arr        return arr
+                
+
+
