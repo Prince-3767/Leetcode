@@ -7,14 +7,34 @@
 # Language: txt
 # Date: 11/03/2026
 
-class Solution:class Solution:
+classÂ Solution:classÂ Solution:
+Â Â Â Â defÂ singleNumber(self,Â nums:Â List[int])Â ->Â int:Â Â Â Â defÂ singleNumber(self,Â nums:Â List[int])Â ->Â int:
+Â Â Â Â Â Â Â Â seenÂ =Â set()Â Â Â Â Â Â Â Â seenÂ =Â set()
+Â Â Â Â Â Â Â Â forÂ numÂ inÂ nums:Â Â Â Â Â Â Â Â forÂ numÂ inÂ nums:
+Â Â Â Â Â Â Â Â Â Â Â Â ifÂ numÂ inÂ seen:Â Â Â Â Â Â Â Â Â Â Â Â ifÂ numÂ inÂ seen:
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â seen.remove(num)Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â seen.remove(num)
+Â Â Â Â Â Â Â Â Â Â Â Â else:Â Â Â Â Â Â Â Â Â Â Â Â else:
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â seen.add(num)Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â seen.add(num)
+Â Â Â Â Â Â Â Â returnÂ seen.pop()Â Â Â Â Â Â Â Â returnÂ seen.pop()
+
+
+
+# ========== Solution B ==========
+# Language: txt
+# Date: 11/03/2026
+
     def singleNumber(self, nums: List[int]) -> int:    def singleNumber(self, nums: List[int]) -> int:
-        seen = set()        seen = set()
+        # seen = set()        # seen = set()
+        # for num in nums:        # for num in nums:
+        #     if num in seen:        #     if num in seen:
+        #         seen.remove(num)        #         seen.remove(num)
+        #     else:        #     else:
+        #         seen.add(num)        #         seen.add(num)
+        # return seen.pop()        # return seen.pop()
+        res = 0        res = 0
         for num in nums:        for num in nums:
-            if num in seen:            if num in seen:
-                seen.remove(num)                seen.remove(num)
-            else:            else:
-                seen.add(num)                seen.add(num)
-        return seen.pop()        return seen.pop()
+            res = res^num            res = res^num
+        return res        return res
+class Solution:class Solution:
 
 
