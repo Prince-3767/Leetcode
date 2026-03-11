@@ -1,6 +1,6 @@
 # 58. Length of Last Word
 # Difficulty: Easy
-# URL: https://leetcode.com/problems/length-of-last-word/submissions/1945354948/
+# URL: https://leetcode.com/problems/length-of-last-word/
 # Date: 12/03/2026
 
 # ========== Solution A ==========
@@ -16,6 +16,7 @@ class Solution:class Solution:
             else:            else:
                 if word:                if word:
                     return len(word)                    return len(word)
+        return len(word)        return len(word)
                         
 
 
