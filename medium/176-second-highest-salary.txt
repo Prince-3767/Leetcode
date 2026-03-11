@@ -1,0 +1,14 @@
+# 176. Second Highest Salary
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/second-highest-salary/
+# Date: 11/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 11/03/2026
+
+# Write your MySQL query statement below# Write your MySQL query statement below
+select max(salary) as SecondHighestSalary from Employee where salary <(select select max(salary) as SecondHighestSalary from Employee where salary <(select 
+max(salary) from Employee)max(salary) from Employee)
+
+
