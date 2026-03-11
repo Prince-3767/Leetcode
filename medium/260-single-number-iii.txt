@@ -1,0 +1,21 @@
+# 260. Single Number III
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/single-number-iii/submissions/1945266883/
+# Date: 11/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 11/03/2026
+
+class Solution:class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:    def singleNumber(self, nums: List[int]) -> List[int]:
+        seen = set()        seen = set()
+        for num in nums:        for num in nums:
+            if num in seen:            if num in seen:
+                seen.remove(num)                seen.remove(num)
+            else:            else:
+                seen.add(num)                seen.add(num)
+        return list(seen)        return list(seen)
+                
+
+
