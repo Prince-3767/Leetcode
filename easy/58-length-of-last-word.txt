@@ -1,0 +1,21 @@
+# 58. Length of Last Word
+# Difficulty: Easy
+# URL: https://leetcode.com/problems/length-of-last-word/submissions/1945354948/
+# Date: 12/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 12/03/2026
+
+class Solution:class Solution:
+    def lengthOfLastWord(self, s: str) -> int:    def lengthOfLastWord(self, s: str) -> int:
+        word = ""        word = ""
+        for i in range(len(s)-1,-1,-1):        for i in range(len(s)-1,-1,-1):
+            if s[i].isalpha():            if s[i].isalpha():
+                word+=s[i]                word+=s[i]
+            else:            else:
+                if word:                if word:
+                    return len(word)                    return len(word)
+                        
+
+
