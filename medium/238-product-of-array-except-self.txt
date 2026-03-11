@@ -1,0 +1,22 @@
+# 238. Product of Array Except Self
+# Difficulty: Medium
+# URL: https://leetcode.com/problems/product-of-array-except-self/
+# Date: 12/03/2026
+
+# ========== Solution A ==========
+# Language: txt
+# Date: 12/03/2026
+
+    def productExceptSelf(self, nums: List[int]) -> List[int]:    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums)        n = len(nums)
+        result = [1]*n        result = [1]*n
+        left = right = 1        left = right = 1
+        for i in range(n):        for i in range(n):
+            result[i]=left            result[i]=left
+            left*=nums[i]            left*=nums[i]
+        for i in range(n-1,-1,-1):        for i in range(n-1,-1,-1):
+            result[i]*=right            result[i]*=right
+            right*= nums[i]            right*= nums[i]
+        return result        return result
+
+
