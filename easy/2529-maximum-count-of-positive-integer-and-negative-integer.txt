@@ -1,12 +1,28 @@
 # 2529. Maximum Count of Positive Integer and Negative Integer
 # Difficulty: Easy
-# URL: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/submissions/1945158428/
+# URL: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/submissions/1945167011/
 # Date: 11/03/2026
 
 # ========== Solution A ==========
 # Language: txt
 # Date: 11/03/2026
 
-class Solution:class Solution:
+                    left = mid+1                    left = mid+1
+            return idx            return idx
+                else:                else:
+                    right = mid-1                    right = mid-1
+                    idx = mid                    idx = mid
+        def first_positive_index():        def first_positive_index():
+            idx = len(nums)            idx = len(nums)
+            left,right = 0,len(nums)-1            left,right = 0,len(nums)-1
+            while left<=right:            while left<=right:
+                mid = (left+right)//2                mid = (left+right)//2
+                if nums[mid]>0:                if nums[mid]>0:
+                    idx = mid                    idx = mid
+                    right = mid-1                    right = mid-1
+                else:                else:
+                    left = mid+1                    left = mid+1
+            return idx            return idx
+                
 
 
