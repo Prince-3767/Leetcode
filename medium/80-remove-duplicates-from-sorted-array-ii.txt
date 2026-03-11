@@ -7,16 +7,32 @@
 # Language: txt
 # Date: 12/03/2026
 
+classÂ Solution:classÂ Solution:
+Â Â Â Â defÂ removeDuplicates(self,Â nums:Â List[int])Â ->Â int:Â Â Â Â defÂ removeDuplicates(self,Â nums:Â List[int])Â ->Â int:
+Â Â Â Â Â Â Â Â freqÂ =Â {}Â Â Â Â Â Â Â Â freqÂ =Â {}
+Â Â Â Â Â Â Â Â leftÂ =Â 0Â Â Â Â Â Â Â Â leftÂ =Â 0
+Â Â Â Â Â Â Â Â forÂ rightÂ inÂ range(len(nums)):Â Â Â Â Â Â Â Â forÂ rightÂ inÂ range(len(nums)):
+Â Â Â Â Â Â Â Â Â Â Â Â ifÂ freq[nums[right]]<=2:Â Â Â Â Â Â Â Â Â Â Â Â ifÂ freq[nums[right]]<=2:
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â nums[left]=nums[right]Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â nums[left]=nums[right]
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â left+=1Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â left+=1
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â freq[nums[right]]Â =Â freq.get(nums[right],0)+1Â Â Â Â Â Â Â Â Â Â Â Â freq[nums[right]]Â =Â freq.get(nums[right],0)+1
+Â Â Â Â Â Â Â Â returnÂ leftÂ Â Â Â Â Â Â Â returnÂ left
+
+
+
+# ========== Solution B ==========
+# Language: txt
+# Date: 12/03/2026
+
 class Solution:class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:    def removeDuplicates(self, nums: List[int]) -> int:
-        freq = {}        freq = {}
         left = 0        left = 0
         for right in range(len(nums)):        for right in range(len(nums)):
-            if freq[nums[right]]<=2:            if freq[nums[right]]<=2:
+            if right<2 or nums[right]!=nums[left-2]:            if right<2 or nums[right]!=nums[left-2]:
                 nums[left]=nums[right]                nums[left]=nums[right]
                 left+=1                left+=1
-                        
-            freq[nums[right]] = freq.get(nums[right],0)+1            freq[nums[right]] = freq.get(nums[right],0)+1
         return left        return left
+
 
 
